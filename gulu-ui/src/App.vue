@@ -1,17 +1,16 @@
 <template>
- <div>
-   hi
- </div>
- <hkl/>
+ <div>导航栏 |
+    <router-link to="/">hkl</router-link> |
+    <router-link to="/xxx">hkl2</router-link></div>
+ <hr/>
+ <router-view/>
 </template>
 
 <script>
-import hkl from './components/hkl.vue'
+
 
 export default {
   name: 'App',
-  components: {
-    hkl
-  }
+ 
 }
 </script>
