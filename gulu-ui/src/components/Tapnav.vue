@@ -1,7 +1,7 @@
 <template>
 
         <div class="topnav">
-        <div class="logo" @click="toggleMenu">
+        <div class="logo">
           logo
         </div>
         <ul class="menu">
@@ -53,7 +53,6 @@ export default {
     }
   }
   >.toggleAside {
-      display: inline-block;
       width: 24px;
       height: 24px;
       position: absolute;
