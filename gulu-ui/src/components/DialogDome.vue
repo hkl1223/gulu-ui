@@ -4,7 +4,8 @@
   </div>
   <h1>示例1</h1>
   <Button @click="toggle">toggle</Button>
-  <Dialog :visible="x"></Dialog>
+  <Dialog v-model:visible="x" :closeOnclickOverlay="true" :ok="f1" :cancel="f2"></Dialog>
+  <!--  如果 closeOnclickOverlay  return false 就会关闭  -->
 </template>
 
 <script lang="ts">
@@ -14,15 +15,19 @@ import { ref } from 'vue'
 export default {
   components:{
     Dialog,
-    Button
+    Button,
   },
   setup(){
     const x = ref(false)
     const toggle =()  =>{
       x.value = !x.value
     }
+    const f1 = () =>{
+      return true /* 如果return false 就不会关闭 */
+    }
+    const f2 = () =>{}
     return {
-      x,toggle
+      x,toggle,f1,f2
     }
   }
 }
