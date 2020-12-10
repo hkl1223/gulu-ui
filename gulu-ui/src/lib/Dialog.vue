@@ -1,20 +1,21 @@
 <template>
 <template v-if="visible">
+    <Teleport to="body">
  <div class="gulu-dialog-overlay" @click="OnclickOverlay"></div>
   <div class="gulu-dialog-wrapper">
       <div class="gulu-dialog">
-        <header>标题<span @click="close" class="gulu-dialog-close"></span></header>
+        <header> <slot name="title"/>
+            <span @click="close" class="gulu-dialog-close"></span></header>
       <main>
-          <p>xxx</p>
-          <p>xxx</p>
+         <slot name="content"/>
       </main>
       <footer>
           <Button level="main" @click="ok">Ok</Button>
           <Button @click="cancel">Cancel</Button>
       </footer> 
       </div>
-      
   </div>
+  </Teleport>
   </template>
 </template>
  
@@ -54,11 +55,10 @@ export default {
          const ok = () =>{
             if(props.ok?.()!==false){
                 close()
-            }
-             
+            }  
          }
          const cancel = () =>{
-             context.emit('cancel')
+             props.cancel?.()
              close()
          }
          return {
