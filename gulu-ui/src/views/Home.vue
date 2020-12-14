@@ -1,4 +1,5 @@
 <template>
+<div class="topnavAndBanner">
     <Topnav />
     <div class="banner">
         <h1>西瓜 UI</h1>
@@ -8,6 +9,7 @@
             <router-link to="/Doc">开始</router-link>
         </p>
     </div>
+</div>
 </template>
 
 <script lang="ts">
@@ -18,13 +20,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.topnavAndBanner{
+  background: rgb(227,255,253);
+  background: linear-gradient(145deg, rgba(227,255,253,1) 0%, rgba(227,255,253,1) 55%, rgba(0,212,255,1) 100%);
+}
 .banner {
   padding: 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: lightgreen;
  .actions{
     padding: 8px 0;
   a {
