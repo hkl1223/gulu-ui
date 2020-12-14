@@ -38,17 +38,14 @@ export default {
       }
       onMounted(x)
       onUpdated(x)
+
       const defaults = context.slots.default()
        defaults.forEach((tag)=>{
          if(tag.type !== Tab){
              throw new Error('tabs子标签必须是tab')
          } 
        })
-       const current = computed(()=>{
-         return defaults.filter((tag)=>{
-           return tag.props.title === props.selected
-         })[0]
-       })
+       
        const titles = defaults.map((tag) =>{
            return tag.props.title
        })
@@ -58,7 +55,6 @@ export default {
        return {
            defaults,
            titles,
-           current,
            select,
            selectedItem,
            indicator,
