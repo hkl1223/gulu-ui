@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import md from '../mardown/get-started.md';
+import md from '../markdown/get-started.md';
 export default {
   data() {
     return {
