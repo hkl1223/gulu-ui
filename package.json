@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "prismjs": "^1.22.0",
     "sass": "1.26.10"
   }
 }
