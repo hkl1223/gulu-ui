@@ -11,9 +11,7 @@
               <router-link to="/doc">文档</router-link>
             </li>
         </ul>
-        <!-- <svg class="icon logo" @click="toggleMenu" aria-hidden="true">
-        <use xlink:href="#icon-xigua"></use>
-        </svg> -->
+        
         <span v-if="toggleMenuButtonVisible"
         class="toggleAside iconfont icon-menu " @click="toggleMenu"></span>
     </div>
@@ -45,25 +43,31 @@ $color:#007974;
   color:$color;
   display: flex;
   padding: 16px;
- position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 20;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  
+ 
  .logo {
     max-width: 6em;
-    margin-right: auto;
+    margin-right: auto; 
+    
     >svg {
       width: 50px;
       height: 50px;
+      
     }
   }
  .menu {
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
+    
  li {
       margin: 0 1em;
     }

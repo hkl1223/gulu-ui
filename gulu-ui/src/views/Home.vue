@@ -6,7 +6,7 @@
         <h1>西瓜 UI</h1>
         <h2>一个超厉害的 UI 框架</h2>
         <p class="actions">
-            <a href="">GitHub</a>
+            <a href="https://github.com/hkl1223/gulu-ui">GitHub</a>
             <router-link to="/Doc">开始</router-link>
         </p>
     </div>
@@ -52,14 +52,14 @@ $border-radius:4px;
 $color:#007974;
 
 .topnavAndBanner{
-  background: linear-gradient(145deg, rgba(227,255,253,1) 0%, rgba(183,233,230,1) 100%,);
+  background: linear-gradient(145deg, rgba(227,255,253,1) 0%, rgb(150, 243, 150)/* rgba(183,233,230,1) */ 100%,);
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 
 
 .banner {
   color: $color;
-  padding: 100px 0;
+  padding: 110px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,7 +68,7 @@ $color:#007974;
     padding: 8px 0;
   a {
       margin:0 8px;
-      background: $green;
+      background: rgb(255, 87, 107);
       color: #fff;
       display: inline-block;
       padding: 8px  24px;

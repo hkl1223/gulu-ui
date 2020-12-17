@@ -81,7 +81,7 @@ $aside-index:10;
   }
 }
 aside {
-  background: lightblue;
+  background: rgb(150, 243, 150) ;
   width: 150px;
   padding: 16px 0;
   position: fixed;
