@@ -1,39 +1,38 @@
 <template>
-    <button class="gulu-button":class="classes":disabled="disabled">
+    <button class="gulu-button" :class="classes" :disabled="disabled">
       <span v-if="loading" class="gulu-loadingIndicator"></span>
-     <slot />
+     <slot/>
   </button>
-
 </template>
 
 <script lang="ts">
 import { computed } from 'vue';
 export default {
     props: {
-        theme:{
+        theme: {
             type:String,
             default:"button",
         },
-        size:{
+        size: {
           type:String,
           default:"normal",
         },
-        level:{
+        level: {
           type:String,
           default:"normal",
         },
-        disabled:{
+        disabled: {
           type:Boolean,
           default:false,
         },
-        loading:{
+        loading: {
           type:Boolean,
           default:false,
         },
     }, 
     setup(props){
       const { theme,size,level } = props
-      const classes = computed(()=>{
+      const classes = computed(() => {
        return{
          [`gulu-theme-${theme}`]: theme,
          [`gulu-size-${size}`]: size,
@@ -81,7 +80,7 @@ div {
   &:focus {
     outline: none;
   }
-   &.gulu-theme-button{
+   &.gulu-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -97,7 +96,7 @@ div {
       color: $grey;
     }
   }
-   >.gulu-loadingIndicator{
+   >.gulu-loadingIndicator {
      width: 14px;
      height: 14px;
      display: inline-block;
@@ -121,7 +120,7 @@ div {
     box-shadow: none;
     color: $blue;
     &:hover,
-    &:focus{
+    &:focus {
       color: lighten($blue, 10%);
     }
   }
@@ -135,15 +134,15 @@ div {
     }
 }	
 }
-button{
-    &.gulu-size-big{
+button {
+    &.gulu-size-big {
       font-size: 24px;
       height: 48px;
       padding: 0 16px;
       margin-top: 10px;
       
     }
-    &.gulu-size-small{
+    &.gulu-size-small {
       font-size: 12px;
       height: 20px;
       padding: 0 4px;
@@ -218,7 +217,6 @@ button{
       }
     }
   }
-  
 }
 }
 </style>

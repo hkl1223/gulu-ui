@@ -10,6 +10,7 @@
     <div class="demo-code" v-if="codeVisible">
        <pre class="language-html" v-html="html" />
   </div>
+  </div>
 </template>
 
 <script lang="ts">
