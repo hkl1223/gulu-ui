@@ -1,4 +1,3 @@
-## Github预览地址：https://github.com/hkl1223/gulu-ui-website.git
-
+## Github预览地址：hkl1223.github.io/gulu-ui-website/#/
 ##
 支持pc端和手机端
